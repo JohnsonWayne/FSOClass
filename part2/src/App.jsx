@@ -9,7 +9,6 @@ const App = () => {
   const [showAll, setShowAll] = useState(true)
 
   const hook = () => {
-    console.log('effect')
     axios
       .get('http://localhost:3001/notes')
       .then(response => {
@@ -19,7 +18,6 @@ const App = () => {
   }
   
   useEffect(hook, [])
-  console.log('render', notes.length, 'notes')
 
   const addNote = (event) => {
     event.preventDefault()
